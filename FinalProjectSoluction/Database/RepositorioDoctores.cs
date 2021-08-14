@@ -7,6 +7,7 @@ using System.Text;
 
 namespace Database
 {
+
     public class RepositorioDoctores
     {
         public SqlConnection connection;
@@ -53,11 +54,8 @@ namespace Database
         {
 
             SqlCommand command = new SqlCommand("Delete Doctores where Id = @id", connection);
-
             command.Parameters.AddWithValue("@id", id);
-
             return ExecuteDML(command);
-
         }
 
         public Doctor GetById(int id)
@@ -65,13 +63,9 @@ namespace Database
             try
             {
                 connection.Open();
-
                 SqlCommand command = new SqlCommand("select * from Doctores where Id = @id", connection);
-
                 command.Parameters.AddWithValue("@id", id);
-
                 SqlDataReader reader = command.ExecuteReader();
-
                 Doctor data = new Doctor();
 
                 while (reader.Read())
@@ -84,26 +78,20 @@ namespace Database
                     data.Cedula = reader.IsDBNull(5) ? "" : reader.GetString(5);
                     data.Foto = reader.IsDBNull(5) ? "" : reader.GetString(5);
                 }
-
                 reader.Close();
                 reader.Dispose();
-
                 connection.Close();
-
                 return data;
-
             }
             catch (Exception e)
             {
                 return null;
             }
         }
-
         public DataTable GetAll()
         {
             try
             {
-
                 SqlDataAdapter query = new SqlDataAdapter("select * from Doctores ", connection);
                 return LoadData(query);
 
@@ -113,7 +101,6 @@ namespace Database
                 return null;
             }
         }
-
         public List<Doctor> GetList()
         {
             try
@@ -153,6 +140,7 @@ namespace Database
                 return null;
             }
         }
+
 
 
         private DataTable LoadData(SqlDataAdapter query)

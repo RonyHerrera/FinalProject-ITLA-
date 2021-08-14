@@ -83,7 +83,6 @@ namespace Database
                 return null;
             }
         }
-
         public DataTable GetAll()
         {
             try
@@ -116,7 +115,7 @@ namespace Database
                     list.Add(new Prueba
                     {
                         Id = reader.IsDBNull(0) ? 0 : reader.GetInt32(0),
-                        Nombre = reader.IsDBNull(1) ? "" : reader.GetString(1)                       
+                        Nombre = reader.IsDBNull(1) ? "" : reader.GetString(1)
                     });
                 }
 
@@ -133,7 +132,6 @@ namespace Database
                 return null;
             }
         }
-
 
         private DataTable LoadData(SqlDataAdapter query)
         {
@@ -156,6 +154,7 @@ namespace Database
 
         }
 
+
         public bool ExecuteDML(SqlCommand query)
         {
             try
@@ -173,5 +172,6 @@ namespace Database
                 return false;
             }
         }
+
     }
 }

@@ -7,6 +7,8 @@ using Database.Modelos;
 
 namespace Database
 {
+
+
     public class RepositorioCitas
     {
         public SqlConnection connection;
@@ -35,7 +37,7 @@ namespace Database
         {
 
             SqlCommand command = new SqlCommand("update IdPacientes = @idPacientes, IdDoctor = @idDoctor, FechaYHoraDeLaCita = @fechaYHoraDeLaCita, CausaDeLaCita = @causaDeLaCita, EstadoDeLaCita = @estadoDeLaCita from Citas where Id = @id", connection);
-            
+
             command.Parameters.AddWithValue("@id", item.Id);
             command.Parameters.AddWithValue("@idPacientes", item.IdPacientes);
             command.Parameters.AddWithValue("@idDoctor", item.IdDoctor);
@@ -61,10 +63,10 @@ namespace Database
         public Cita GetById(int id)
         {
             try
-            {               
+            {
                 connection.Open();
 
-                SqlCommand command = new SqlCommand("select * from Citas where Id = @id",connection);
+                SqlCommand command = new SqlCommand("select * from Citas where Id = @id", connection);
 
                 command.Parameters.AddWithValue("@id", id);
 
@@ -84,15 +86,17 @@ namespace Database
 
                 reader.Close();
                 reader.Dispose();
-
                 connection.Close();
 
                 return data;
 
+
             }
-            catch(Exception e)
+            catch (Exception e)
             {
+
                 return null;
+
             }
         }
 
@@ -100,10 +104,11 @@ namespace Database
         {
             try
             {
+
                 SqlDataAdapter query = new SqlDataAdapter("Select C.Id as ID, P.Nombre as Paciente, D.Nombre as Doctor, C.FechaYHoraDeLaCita, C.CausaDeLaCita, C.EstadoDeLaCita from Citas C join Pacientes P on P.Id = C.IdPaciente join Doctores D on D.Id = C.IdDoctor", connection);
                 return LoadData(query);
-
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 return null;
             }
@@ -113,10 +118,9 @@ namespace Database
         {
             try
             {
+
                 int elemento1 = -1;
-
                 connection.Open();
-
                 SqlCommand command1 = new SqlCommand("Select @campo from Libros where @campo = @id", connection);
 
                 command1.Parameters.AddWithValue("@id", id);
@@ -131,7 +135,6 @@ namespace Database
 
                 reader1.Close();
                 reader1.Dispose();
-
                 connection.Close();
 
                 if (elemento1 == id)
@@ -142,27 +145,20 @@ namespace Database
                 {
                     return false;
                 }
-
             }
             catch (Exception e)
             {
                 return false;
             }
         }
-
-
         private DataTable LoadData(SqlDataAdapter query)
         {
             try
             {
                 DataTable data = new DataTable();
-
                 connection.Open();
-
                 query.Fill(data);
-
                 connection.Close();
-
                 return data;
             }
             catch (Exception e)
@@ -172,16 +168,14 @@ namespace Database
 
         }
 
+
         public bool ExecuteDML(SqlCommand query)
         {
             try
             {
                 connection.Open();
-
                 query.ExecuteNonQuery();
-
                 connection.Close();
-
                 return true;
             }
             catch (Exception e)
@@ -190,9 +184,7 @@ namespace Database
             }
         }
 
-
         //Inutiles para este repositorio
-
         public List<Cita> GetList()
         {
             try
@@ -207,7 +199,7 @@ namespace Database
 
                 while (reader.Read())
                 {
-                   list.Add(new Cita
+                    list.Add(new Cita
                     {
                         Id = reader.IsDBNull(0) ? 0 : reader.GetInt32(0),
                         IdPacientes = reader.IsDBNull(1) ? 0 : reader.GetInt32(1),
@@ -215,7 +207,7 @@ namespace Database
                         FechaYHoraDeLaCita = reader.IsDBNull(3) ? new DateTime(0000, 00, 00, 00, 00, 00) : reader.GetDateTime(3),
                         CausaDeLaCita = reader.IsDBNull(4) ? "" : reader.GetString(4),
                         EstadoDeLaCita = reader.IsDBNull(5) ? 0 : reader.GetInt32(5)
-                   });
+                    });
                 }
 
                 reader.Close();
@@ -230,6 +222,7 @@ namespace Database
             {
                 return null;
             }
+
         }
 
     }

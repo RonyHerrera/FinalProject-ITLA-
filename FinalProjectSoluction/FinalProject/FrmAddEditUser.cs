@@ -8,14 +8,14 @@ using System.Windows.Forms;
 
 namespace FinalProject
 {
-    public partial class FrmMantenimientoDeUsuarios : Form
+    public partial class FrmAddEditUser : Form
     {
-        public FrmMantenimientoDeUsuarios()
+        public FrmAddEditUser()
         {
             InitializeComponent();
         }
 
-        private void FrmMantenimientoDeUsuarios_Load(object sender, EventArgs e)
+        private void txtRegNombre_TextChanged(object sender, EventArgs e)
         {
 
         }

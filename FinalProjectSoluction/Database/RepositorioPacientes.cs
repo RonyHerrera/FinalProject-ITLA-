@@ -15,7 +15,6 @@ namespace Database
         {
             this.connection = sqlConnetion;
         }
-
         public bool Add(Paciente item)
         {
 
@@ -52,8 +51,8 @@ namespace Database
             command.Parameters.AddWithValue("@foto", item.Foto);
 
             return ExecuteDML(command);
-
         }
+
 
         public bool Delete(int id)
         {
@@ -65,7 +64,6 @@ namespace Database
             return ExecuteDML(command);
 
         }
-
         public Paciente GetById(int id)
         {
             try
@@ -88,7 +86,7 @@ namespace Database
                     data.Telefono = reader.IsDBNull(3) ? "" : reader.GetString(3);
                     data.Direccion = reader.IsDBNull(4) ? "" : reader.GetString(4);
                     data.Cedula = reader.IsDBNull(5) ? "" : reader.GetString(6);
-                    data.FechaDeNacimiento = reader.IsDBNull(6) ? new DateTime(0000,00,00) : reader.GetDateTime(6);
+                    data.FechaDeNacimiento = reader.IsDBNull(6) ? new DateTime(0000, 00, 00) : reader.GetDateTime(6);
                     data.Fumador = reader.IsDBNull(7) ? new bool() : reader.GetBoolean(7);
                     data.Alergias = reader.IsDBNull(8) ? "" : reader.GetString(8);
                     data.Foto = reader.IsDBNull(9) ? "" : reader.GetString(9);
@@ -149,7 +147,7 @@ namespace Database
                         Fumador = reader.IsDBNull(7) ? new bool() : reader.GetBoolean(7),
                         Alergias = reader.IsDBNull(8) ? "" : reader.GetString(8),
                         Foto = reader.IsDBNull(9) ? "" : reader.GetString(9)
-                     });
+                    });
                 }
 
                 reader.Close();
@@ -165,7 +163,6 @@ namespace Database
                 return null;
             }
         }
-
 
         private DataTable LoadData(SqlDataAdapter query)
         {
@@ -188,16 +185,14 @@ namespace Database
 
         }
 
+
         public bool ExecuteDML(SqlCommand query)
         {
             try
             {
                 connection.Open();
-
                 query.ExecuteNonQuery();
-
                 connection.Close();
-
                 return true;
             }
             catch (Exception e)
@@ -205,5 +200,6 @@ namespace Database
                 return false;
             }
         }
+
     }
 }

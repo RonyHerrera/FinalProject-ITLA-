@@ -8,14 +8,14 @@ using System.Windows.Forms;
 
 namespace FinalProject
 {
-    public partial class FrmMantenimientoDeUsuarios : Form
+    public partial class FrmAddEditPacientes : Form
     {
-        public FrmMantenimientoDeUsuarios()
+        public FrmAddEditPacientes()
         {
             InitializeComponent();
         }
 
-        private void FrmMantenimientoDeUsuarios_Load(object sender, EventArgs e)
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
