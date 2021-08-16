@@ -29,21 +29,6 @@ namespace FinalProject
         }
 
         #region "EVENTOS"
-        private void BtnAgregar_Click(object sender, EventArgs e)
-        {
-            Agregar();
-        }
-
-        private void BtnDelete_Click(object sender, EventArgs e)
-        {
-            Delete();
-        }
-
-        private void btnEditaruser_Click(object sender, EventArgs e)
-        {
-            Edit();
-        }
-
         private void btnAtras_Click(object sender, EventArgs e)
         {
             Atras();
@@ -57,6 +42,16 @@ namespace FinalProject
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             IndexDB = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void BtnReportar_Click(object sender, EventArgs e)
+        {
+            Reportar();
         }
         #endregion
 
@@ -77,47 +72,29 @@ namespace FinalProject
             }
         }
 
-        public void Agregar()
-        {
-            FrmAddEditResultadosPruebDeLab frm = new FrmAddEditResultadosPruebDeLab(comportamiento, 1);
-            frm.Show();
-            this.Close();
-        }
-
-        public void Delete()
-        {
-            if (IndexDB != -1)
-            {
-                DialogResult result = MessageBox.Show("Esta seguro que lo desea ELIMINAR ??", "MENSAGE", MessageBoxButtons.YesNo);
-
-                if (result == DialogResult.Yes)
-                {
-                    servicios.Delete(IndexDB);
-                    CargarDataGridView();
-                    IndexDB = -1;
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("No ha seleccionado nada", "NOTIFICACION");
-            }
-        }
-
-        public void Edit()
+        public void Reportar()
         {
             if (IndexDB != -1)
             {
                 Resultados resul = servicios.GetById(IndexDB);
-                FrmAddEditResultadosPruebDeLab frm = new FrmAddEditResultadosPruebDeLab(comportamiento, 2);
-                frm.IdUser = resul.Id;
+
+                FrmReportarPruebaDeLab frm = new FrmReportarPruebaDeLab(comportamiento, resul.Id);
                 frm.Show();
                 IndexDB = -1;
                 this.Close();
+
             }
             else
             {
                 MessageBox.Show("No ha seleccionado nada", "NOTIFICACION");
+            }
+        }
+        
+        public void Buscar()
+        {
+            if (!string.IsNullOrEmpty(TbxBuscar.Text))
+            {
+                servicios.GetByCedula(TbxBuscar.Text);
             }
         }
 

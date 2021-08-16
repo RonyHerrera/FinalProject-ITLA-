@@ -88,6 +88,7 @@ namespace Database
                 return null;
             }
         }
+
         public DataTable GetAll()
         {
             try
@@ -101,6 +102,7 @@ namespace Database
                 return null;
             }
         }
+
         public List<Doctor> GetList()
         {
             try
@@ -134,6 +136,20 @@ namespace Database
 
                 return list;
 
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public DataTable GetByCedula(string cedula)
+        {
+            try
+            {
+                SqlDataAdapter query = new SqlDataAdapter("select * from Doctores where Cedula = @cedula", connection);
+                query.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@cedula", Value = cedula, SqlDbType = SqlDbType.NVarChar, Size = 2000 });
+                return LoadData(query);
             }
             catch (Exception e)
             {

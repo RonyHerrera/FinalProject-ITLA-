@@ -16,6 +16,15 @@
     <Compile Update="FrmAddEditUser.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmAgregarCitaFormulario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmAgregarCitaListaDeDoctores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmAgregarCitasListadoPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmMDeCitas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -35,6 +44,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmMenuHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmReportarPruebaDeLab.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Login.cs">

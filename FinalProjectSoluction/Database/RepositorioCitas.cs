@@ -21,7 +21,7 @@ namespace Database
         public bool Add(Cita item)
         {
 
-            SqlCommand command = new SqlCommand("inser into Citas(IdPacientes, IdDoctor, FechaYHoraDeLaCita, CausaDeLaCita, EstadoDeLaCita) value(@idPacientes, @idDoctor, @fechaYHoraDeLaCita, @causaDeLaCita, @estadoDeLaCita)", connection);
+            SqlCommand command = new SqlCommand("insert into Citas(IdPaciente, IdDoctor, FechaYHoraDeLaCita, CausaDeLaCita, EstadoDeLaCita) values(@idPacientes, @idDoctor, @fechaYHoraDeLaCita, @causaDeLaCita, @estadoDeLaCita)", connection);
 
             command.Parameters.AddWithValue("@idPacientes", item.IdPacientes);
             command.Parameters.AddWithValue("@idDoctor", item.IdDoctor);
@@ -36,7 +36,7 @@ namespace Database
         public bool Update(Cita item)
         {
 
-            SqlCommand command = new SqlCommand("update IdPacientes = @idPacientes, IdDoctor = @idDoctor, FechaYHoraDeLaCita = @fechaYHoraDeLaCita, CausaDeLaCita = @causaDeLaCita, EstadoDeLaCita = @estadoDeLaCita from Citas where Id = @id", connection);
+            SqlCommand command = new SqlCommand("update Citas Set IdPacientes = @idPacientes, IdDoctor = @idDoctor, FechaYHoraDeLaCita = @fechaYHoraDeLaCita, CausaDeLaCita = @causaDeLaCita, EstadoDeLaCita = @estadoDeLaCita where Id = @id", connection);
 
             command.Parameters.AddWithValue("@id", item.Id);
             command.Parameters.AddWithValue("@idPacientes", item.IdPacientes);
@@ -151,6 +151,8 @@ namespace Database
                 return false;
             }
         }
+
+
         private DataTable LoadData(SqlDataAdapter query)
         {
             try
@@ -167,7 +169,6 @@ namespace Database
             }
 
         }
-
 
         public bool ExecuteDML(SqlCommand query)
         {

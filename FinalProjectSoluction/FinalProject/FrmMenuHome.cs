@@ -96,7 +96,7 @@ namespace FinalProject
             }
             else
             {
-                FrmMDeCitas frm = new FrmMDeCitas();
+                FrmMDeCitas frm = new FrmMDeCitas(comportamiento);
                 frm.Show();
                 this.Close();
             }

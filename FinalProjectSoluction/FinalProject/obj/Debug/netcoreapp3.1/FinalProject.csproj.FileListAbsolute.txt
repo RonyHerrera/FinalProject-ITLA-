@@ -64,3 +64,7 @@ C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\FinalProject\obj\De
 C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\FinalProject\obj\Debug\netcoreapp3.1\FinalProject.genruntimeconfig.cache
 C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\FinalProject\obj\Debug\netcoreapp3.1\FinalProject.FrmMDeUsuarios.resources
 C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\FinalProject\obj\Debug\netcoreapp3.1\FinalProject.FrmAddEditResultadosPruebDeLab.resources
+C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\FinalProject\obj\Debug\netcoreapp3.1\FinalProject.FrmReportarPruebaDeLab.resources
+C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\FinalProject\obj\Debug\netcoreapp3.1\FinalProject.FrmAgregarCitaFormulario.resources
+C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\FinalProject\obj\Debug\netcoreapp3.1\FinalProject.FrmAgregarCitaListaDeDoctores.resources
+C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\FinalProject\obj\Debug\netcoreapp3.1\FinalProject.FrmAgregarCitasListadoPacientes.resources

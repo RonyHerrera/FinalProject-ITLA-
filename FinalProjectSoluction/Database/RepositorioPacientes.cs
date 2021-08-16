@@ -66,10 +66,7 @@ namespace Database
         }
 
         public Paciente GetById(int id)
-        {
-            Paciente data1 = new Paciente();
-            data1.Nombre = "Tu eres el mejor";
-
+        {            
             try
             {
                 connection.Open();
@@ -90,7 +87,7 @@ namespace Database
                     data.Apellido = reader.IsDBNull(2) ? "" : reader.GetString(2);
                     data.Telefono = reader.IsDBNull(3) ? "" : reader.GetString(3);
                     data.Direccion = reader.IsDBNull(4) ? "" : reader.GetString(4);
-                    data.Cedula = reader.IsDBNull(5) ? "" : reader.GetString(6 );
+                    data.Cedula = reader.IsDBNull(5) ? "" : reader.GetString(5);
                     data.FechaDeNacimiento = reader.IsDBNull(6) ? new DateTime(0000, 00, 00) : reader.GetDateTime(6);
                     data.Fumador = reader.IsDBNull(7) ? new bool() : reader.GetBoolean(7);
                     data.Alergias = reader.IsDBNull(8) ? "" : reader.GetString(8);
@@ -107,7 +104,7 @@ namespace Database
             }
             catch (Exception e)
             {
-                return data1;
+                return null;
             }
         }
 
@@ -162,6 +159,20 @@ namespace Database
 
                 return list;
 
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public DataTable GetByCedula(string cedula)
+        {
+            try
+            {
+                SqlDataAdapter query = new SqlDataAdapter("select * from Pacientes where Cedula = @cedula", connection);
+                query.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@cedula", Value = cedula, SqlDbType = SqlDbType.NVarChar, Size = 2000 });
+                return LoadData(query);
             }
             catch (Exception e)
             {

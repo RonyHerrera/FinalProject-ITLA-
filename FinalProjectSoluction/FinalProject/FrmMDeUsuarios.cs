@@ -62,7 +62,7 @@ namespace FinalProject
 
         #region "Metodos Privados"
 
-        public void Atras()
+        private void Atras()
         {
             if (comportamiento == 1)
             {
@@ -78,14 +78,14 @@ namespace FinalProject
             }
         }
 
-        public void Agregar()
+        private void Agregar()
         {
             FrmAddEditUser frm = new FrmAddEditUser(comportamiento, 1);
             frm.Show();
             this.Close();
         }
 
-        public void Delete()
+        private void Delete()
         {
             if (IndexDB != -1)
             {
@@ -105,7 +105,7 @@ namespace FinalProject
             }
         }
 
-        public void Edit()
+        private void Edit()
         {
             if (IndexDB != -1)
             {
@@ -122,7 +122,7 @@ namespace FinalProject
             }
         }
 
-        public void CargarDataGridView()
+        private void CargarDataGridView()
         {
             dataGridView1.DataSource = servicios.GetAll();
             dataGridView1.ClearSelection();

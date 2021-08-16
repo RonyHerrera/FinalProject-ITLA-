@@ -19,7 +19,7 @@ namespace Database
         public bool Add(Resultados item)
         {
 
-            SqlCommand command = new SqlCommand("inser into ResultadosDeLaboratorio(IdCita, IdPacientes, IdPruebaDeLaboratorio, IdDoctor, ResultadosDeLaPrueba, EstadoDelResultado) value(@idCita, @idPacientes, @idPruebaDeLaboratorio, @idDoctor, @resultadosDeLaPrueba, @estadoDelResultado)", connection);
+            SqlCommand command = new SqlCommand("insert into ResultadosDeLaboratorio(IdCita, IdPacientes, IdPruebaDeLaboratorio, IdDoctor, ResultadosDeLaPrueba, EstadoDelResultado) values(@idCita, @idPacientes, @idPruebaDeLaboratorio, @idDoctor, @resultadosDeLaPrueba, @estadoDelResultado)", connection);
 
             command.Parameters.AddWithValue("@idCita", item.IdCita);
             command.Parameters.AddWithValue("@idPacientes", item.IdPacientes);
@@ -35,7 +35,7 @@ namespace Database
         public bool Update(Resultados item)
         {
 
-            SqlCommand command = new SqlCommand("update IdCita = @idCita, IdPacientes = @idPacientes, IdPruebaDeLaboratorio = @idPruebaDeLaboratorio, IdDoctor = @idDoctor, ResultadosDeLaPrueba = @ResultadosDeLaPrueba, EstadoDelResultado = @estadoDelResultado from ResultadosDeLaboratorio where Id = @id", connection);
+            SqlCommand command = new SqlCommand("update ResultadosDeLaboratorio Set IdCita = @idCita, IdPacientes = @idPacientes, IdPruebaDeLaboratorio = @idPruebaDeLaboratorio, IdDoctor = @idDoctor, ResultadosDeLaPrueba = @ResultadosDeLaPrueba, EstadoDelResultado = @estadoDelResultado where Id = @id", connection);
 
             command.Parameters.AddWithValue("@id", item.Id);
             command.Parameters.AddWithValue("@idCita", item.IdCita);
@@ -104,7 +104,7 @@ namespace Database
             try
             {
 
-                SqlDataAdapter query = new SqlDataAdapter("Select R.Id as ID, C.EstadoDeLaCita as Cita, P.Nombre as Pacientes, PL.Nombre as PruebasDeLaboratorio, D.Nombre as Doctor, R.ResultadoDeLaPrueba, R.EstadoDelResultado from ResultadosDeLaboratorio R join Citas C on C.Id = R.IdCita join Pacientes P on P.Id = R.IdPacientes join PruebasDeLaboratorio PL on PL.Id = R.IdPruebaDeLaboratorio join Doctores D on D.Id = R.IdDoctor", connection);
+                SqlDataAdapter query = new SqlDataAdapter("select CONCAT(P.Nombre,P.Apellido) AS Nombre, P.Cedula as Cedula, PR.Nombre as NombrePrueba from ResultadosDeLaboratorio R join Pacientes P on P.Id = R.IdPacientes join PruebasDeLaboratorio PR on PR.Id = R.IdPruebaDeLaboratorio", connection);
                 return LoadData(query);
 
             }
@@ -155,6 +155,19 @@ namespace Database
             }
         }
 
+        public DataTable GetByCedula(string cedula)
+        {
+            try
+            {
+                SqlDataAdapter query = new SqlDataAdapter("select CONCAT(P.Nombre,P.Apellido) AS Nombre, P.Cedula as Cedula, PR.Nombre as NombrePrueba from ResultadosDeLaboratorio R join Pacientes P on P.Id = R.IdPacientes join PruebasDeLaboratorio PR on PR.Id = R.IdPruebaDeLaboratorio where P.Cedula = @cedula", connection);
+                query.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@cedula", Value = cedula, SqlDbType = SqlDbType.NVarChar, Size = 2000 });
+                return LoadData(query);
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
 
         private DataTable LoadData(SqlDataAdapter query)
         {

@@ -48,5 +48,11 @@ namespace BuinesLayer
         {
             return repositorio.GetAll();
         }
+
+        public DataTable GetByCedula(string cedula)
+        {
+            return repositorio.GetByCedula(cedula);
+        }
+
     }
 }
