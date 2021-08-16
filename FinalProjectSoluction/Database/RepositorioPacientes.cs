@@ -15,10 +15,11 @@ namespace Database
         {
             this.connection = sqlConnetion;
         }
+
         public bool Add(Paciente item)
         {
 
-            SqlCommand command = new SqlCommand("inser into Pacientes(Nombre, Apellido, Telefono, Direccion, Cedula, FechaDeNacimiento, Fumador, Alergias, Foto) value(@nombre, @apellido, @telefono, @direccion, @cedula, @fechaDeNacimiento, @fumador, @alergias, @foto)", connection);
+            SqlCommand command = new SqlCommand("insert into Pacientes(Nombre, Apellido, Telefono, Direccion, Cedula, FechaDeNacimiento, Fumador, Alergias, Foto) values(@nombre, @apellido, @telefono, @direccion, @cedula, @fechaDeNacimiento, @fumador, @alergias, @foto)", connection);
 
             command.Parameters.AddWithValue("@nombre", item.Nombre);
             command.Parameters.AddWithValue("@apellido", item.Apellido);
@@ -37,7 +38,7 @@ namespace Database
         public bool Update(Paciente item)
         {
 
-            SqlCommand command = new SqlCommand("update Nombre = @nombre, Apellido = @apellido, Telefono = @telefono, Direccion = @direccion, Cedula = @cedula, FechaDeNacimiento = @fechaDeNacimiento, Fumador = @fumador, Alergias = @alergias, Foto = @foto from Pacientes where Id = @id", connection);
+            SqlCommand command = new SqlCommand("update Pacientes SET Nombre = @nombre, Apellido = @apellido, Telefono = @telefono, Direccion = @direccion, Cedula = @cedula, FechaDeNacimiento = @fechaDeNacimiento, Fumador = @fumador, Alergias = @alergias, Foto = @foto where Id = @id", connection);
 
             command.Parameters.AddWithValue("@id", item.Id);
             command.Parameters.AddWithValue("@nombre", item.Nombre);
@@ -53,7 +54,6 @@ namespace Database
             return ExecuteDML(command);
         }
 
-
         public bool Delete(int id)
         {
 
@@ -64,8 +64,12 @@ namespace Database
             return ExecuteDML(command);
 
         }
+
         public Paciente GetById(int id)
         {
+            Paciente data1 = new Paciente();
+            data1.Nombre = "Tu eres el mejor";
+
             try
             {
                 connection.Open();
@@ -80,18 +84,19 @@ namespace Database
 
                 while (reader.Read())
                 {
+
                     data.Id = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
                     data.Nombre = reader.IsDBNull(1) ? "" : reader.GetString(1);
                     data.Apellido = reader.IsDBNull(2) ? "" : reader.GetString(2);
                     data.Telefono = reader.IsDBNull(3) ? "" : reader.GetString(3);
                     data.Direccion = reader.IsDBNull(4) ? "" : reader.GetString(4);
-                    data.Cedula = reader.IsDBNull(5) ? "" : reader.GetString(6);
+                    data.Cedula = reader.IsDBNull(5) ? "" : reader.GetString(6 );
                     data.FechaDeNacimiento = reader.IsDBNull(6) ? new DateTime(0000, 00, 00) : reader.GetDateTime(6);
                     data.Fumador = reader.IsDBNull(7) ? new bool() : reader.GetBoolean(7);
                     data.Alergias = reader.IsDBNull(8) ? "" : reader.GetString(8);
                     data.Foto = reader.IsDBNull(9) ? "" : reader.GetString(9);
                 }
-
+              
                 reader.Close();
                 reader.Dispose();
 
@@ -102,7 +107,7 @@ namespace Database
             }
             catch (Exception e)
             {
-                return null;
+                return data1;
             }
         }
 
@@ -164,6 +169,7 @@ namespace Database
             }
         }
 
+
         private DataTable LoadData(SqlDataAdapter query)
         {
             try
@@ -184,7 +190,6 @@ namespace Database
             }
 
         }
-
 
         public bool ExecuteDML(SqlCommand query)
         {

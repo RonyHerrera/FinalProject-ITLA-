@@ -16,6 +16,7 @@ namespace BuinesLayer
         public ServiciosDoctores(SqlConnection connection)
         {
             this.Connection = connection;
+            repositorio = new RepositorioDoctores(connection);
         }
 
         public bool Add(Doctor item)

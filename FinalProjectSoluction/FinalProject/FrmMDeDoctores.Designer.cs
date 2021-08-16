@@ -73,6 +73,7 @@ namespace FinalProject
             this.btnAtras.TabIndex = 0;
             this.btnAtras.Text = "Atrás";
             this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // BtnAgregar
             // 
@@ -84,6 +85,7 @@ namespace FinalProject
             this.BtnAgregar.TabIndex = 0;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -109,6 +111,7 @@ namespace FinalProject
             this.btnEditaruser.TabIndex = 0;
             this.btnEditaruser.Text = "Editar";
             this.btnEditaruser.UseVisualStyleBackColor = true;
+            this.btnEditaruser.Click += new System.EventHandler(this.btnEditaruser_Click);
             // 
             // BtnDelete
             // 
@@ -119,6 +122,7 @@ namespace FinalProject
             this.BtnDelete.TabIndex = 0;
             this.BtnDelete.Text = "Eliminar";
             this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // label1
             // 
@@ -134,14 +138,22 @@ namespace FinalProject
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(114, 75);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(568, 316);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // FrmMDeDoctores
             // 
@@ -151,6 +163,7 @@ namespace FinalProject
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmMDeDoctores";
             this.Text = "FrmMDeDoctores";
+            this.Load += new System.EventHandler(this.FrmMDeDoctores_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

@@ -19,7 +19,7 @@ namespace Database
         public bool Add(Prueba item)
         {
 
-            SqlCommand command = new SqlCommand("inser into PruebasDeLaboratorio(Nombre) value(@nombre)", connection);
+            SqlCommand command = new SqlCommand("insert into PruebasDeLaboratorio(Nombre) values(@nombre)", connection);
 
             command.Parameters.AddWithValue("@nombre", item.Nombre);
 
@@ -30,7 +30,7 @@ namespace Database
         public bool Update(Prueba item)
         {
 
-            SqlCommand command = new SqlCommand("update Nombre = @nombre from PruebasDeLaboratorio where Id = @id", connection);
+            SqlCommand command = new SqlCommand("update PruebasDeLaboratorio SET Nombre = @nombre where Id = @id", connection);
 
             command.Parameters.AddWithValue("@id", item.Id);
             command.Parameters.AddWithValue("@nombre", item.Nombre);
@@ -83,6 +83,7 @@ namespace Database
                 return null;
             }
         }
+
         public DataTable GetAll()
         {
             try
@@ -133,6 +134,7 @@ namespace Database
             }
         }
 
+
         private DataTable LoadData(SqlDataAdapter query)
         {
             try
@@ -153,7 +155,6 @@ namespace Database
             }
 
         }
-
 
         public bool ExecuteDML(SqlCommand query)
         {

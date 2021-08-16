@@ -15,8 +15,9 @@ namespace BuinesLayer
         public RepositorioUsuarios repositorio;
 
         public ServiciosUsuarios(SqlConnection connection)
-        {
+        {            
             this.Connection = connection;
+            repositorio = new RepositorioUsuarios(connection);
         }
 
         public bool Add(Usuarios item)
@@ -37,6 +38,11 @@ namespace BuinesLayer
         public Usuarios GetById(int id)
         {
             return repositorio.GetById(id);
+        }
+
+        public Usuarios GetName(string name)
+        {
+            return repositorio.GetName(name);
         }
 
         public List<Usuarios> GetList()

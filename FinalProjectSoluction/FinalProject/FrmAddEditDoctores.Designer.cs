@@ -37,11 +37,11 @@ namespace FinalProject
             this.LblUserName = new System.Windows.Forms.Label();
             this.lblContraRegis = new System.Windows.Forms.Label();
             this.lblconfimPass = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.TxtApellido = new System.Windows.Forms.TextBox();
-            this.TxtCorreo = new System.Windows.Forms.TextBox();
-            this.TxtTelefono = new System.Windows.Forms.TextBox();
-            this.TxtCedula = new System.Windows.Forms.TextBox();
+            this.TbxNombre = new System.Windows.Forms.TextBox();
+            this.TbxApellido = new System.Windows.Forms.TextBox();
+            this.TbxCorreo = new System.Windows.Forms.TextBox();
+            this.TbxTelefono = new System.Windows.Forms.TextBox();
+            this.TbxCedula = new System.Windows.Forms.TextBox();
             this.BtmAddFoto = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.BtnRegGuardar = new System.Windows.Forms.Button();
@@ -83,11 +83,11 @@ namespace FinalProject
             this.tableLayoutPanel2.Controls.Add(this.LblUserName, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.lblContraRegis, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.lblconfimPass, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.txtNombre, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.TxtApellido, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.TxtCorreo, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.TxtTelefono, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.TxtCedula, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.TbxNombre, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.TbxApellido, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.TbxCorreo, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.TbxTelefono, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.TbxCedula, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.BtmAddFoto, 1, 5);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(133, 89);
@@ -163,45 +163,45 @@ namespace FinalProject
             this.lblconfimPass.TabIndex = 2;
             this.lblconfimPass.Text = "Cédula:";
             // 
-            // txtNombre
+            // TbxNombre
             // 
-            this.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNombre.Location = new System.Drawing.Point(269, 3);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(260, 27);
-            this.txtNombre.TabIndex = 3;
+            this.TbxNombre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TbxNombre.Location = new System.Drawing.Point(269, 3);
+            this.TbxNombre.Name = "TbxNombre";
+            this.TbxNombre.Size = new System.Drawing.Size(260, 27);
+            this.TbxNombre.TabIndex = 3;
             // 
-            // TxtApellido
+            // TbxApellido
             // 
-            this.TxtApellido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtApellido.Location = new System.Drawing.Point(269, 50);
-            this.TxtApellido.Name = "TxtApellido";
-            this.TxtApellido.Size = new System.Drawing.Size(260, 27);
-            this.TxtApellido.TabIndex = 3;
+            this.TbxApellido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TbxApellido.Location = new System.Drawing.Point(269, 50);
+            this.TbxApellido.Name = "TbxApellido";
+            this.TbxApellido.Size = new System.Drawing.Size(260, 27);
+            this.TbxApellido.TabIndex = 3;
             // 
-            // TxtCorreo
+            // TbxCorreo
             // 
-            this.TxtCorreo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtCorreo.Location = new System.Drawing.Point(269, 97);
-            this.TxtCorreo.Name = "TxtCorreo";
-            this.TxtCorreo.Size = new System.Drawing.Size(260, 27);
-            this.TxtCorreo.TabIndex = 3;
+            this.TbxCorreo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TbxCorreo.Location = new System.Drawing.Point(269, 97);
+            this.TbxCorreo.Name = "TbxCorreo";
+            this.TbxCorreo.Size = new System.Drawing.Size(260, 27);
+            this.TbxCorreo.TabIndex = 3;
             // 
-            // TxtTelefono
+            // TbxTelefono
             // 
-            this.TxtTelefono.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtTelefono.Location = new System.Drawing.Point(269, 149);
-            this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(260, 27);
-            this.TxtTelefono.TabIndex = 3;
+            this.TbxTelefono.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TbxTelefono.Location = new System.Drawing.Point(269, 149);
+            this.TbxTelefono.Name = "TbxTelefono";
+            this.TbxTelefono.Size = new System.Drawing.Size(260, 27);
+            this.TbxTelefono.TabIndex = 3;
             // 
-            // TxtCedula
+            // TbxCedula
             // 
-            this.TxtCedula.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtCedula.Location = new System.Drawing.Point(269, 195);
-            this.TxtCedula.Name = "TxtCedula";
-            this.TxtCedula.Size = new System.Drawing.Size(260, 27);
-            this.TxtCedula.TabIndex = 3;
+            this.TbxCedula.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TbxCedula.Location = new System.Drawing.Point(269, 195);
+            this.TbxCedula.Name = "TbxCedula";
+            this.TbxCedula.Size = new System.Drawing.Size(260, 27);
+            this.TbxCedula.TabIndex = 3;
             // 
             // BtmAddFoto
             // 
@@ -238,6 +238,7 @@ namespace FinalProject
             this.BtnRegGuardar.TabIndex = 0;
             this.BtnRegGuardar.Text = "Guardar";
             this.BtnRegGuardar.UseVisualStyleBackColor = true;
+            this.BtnRegGuardar.Click += new System.EventHandler(this.BtnRegGuardar_Click);
             // 
             // BtnRegCancelar
             // 
@@ -248,6 +249,7 @@ namespace FinalProject
             this.BtnRegCancelar.TabIndex = 0;
             this.BtnRegCancelar.Text = "Cancelar";
             this.BtnRegCancelar.UseVisualStyleBackColor = true;
+            this.BtnRegCancelar.Click += new System.EventHandler(this.BtnRegCancelar_Click);
             // 
             // LblTituloUser
             // 
@@ -270,6 +272,7 @@ namespace FinalProject
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmAddEditDoctores";
             this.Text = "FrmAddEditDoctores";
+            this.Load += new System.EventHandler(this.FrmAddEditDoctores_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -289,11 +292,11 @@ namespace FinalProject
         private System.Windows.Forms.Label LblUserName;
         private System.Windows.Forms.Label lblContraRegis;
         private System.Windows.Forms.Label lblconfimPass;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox TxtApellido;
-        private System.Windows.Forms.TextBox TxtCorreo;
-        private System.Windows.Forms.TextBox TxtTelefono;
-        private System.Windows.Forms.TextBox TxtCedula;
+        private System.Windows.Forms.TextBox TbxNombre;
+        private System.Windows.Forms.TextBox TbxApellido;
+        private System.Windows.Forms.TextBox TbxCorreo;
+        private System.Windows.Forms.TextBox TbxTelefono;
+        private System.Windows.Forms.TextBox TbxCedula;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button BtnRegGuardar;
         private System.Windows.Forms.Button BtnRegCancelar;

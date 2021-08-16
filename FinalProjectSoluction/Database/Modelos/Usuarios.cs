@@ -10,6 +10,7 @@ namespace Database.Modelos
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Correo { get; set; }
+        public string NombreDeUsuario { get; set; }
         public string Contraseña { get; set; }
         public int TipoDeUsuario { get; set; }
     }

@@ -20,7 +20,7 @@ namespace Database
         public bool Add(Doctor item)
         {
 
-            SqlCommand command = new SqlCommand("inser into Doctores(Nombre, Apellido, Correo, Telefono, Cedula, Foto) value(@nombre, @apellido, @correo, @telefono, @cedula, @foto)", connection);
+            SqlCommand command = new SqlCommand("insert into Doctores(Nombre, Apellido, Correo, Telefono, Cedula, Foto) values(@nombre, @apellido, @correo, @telefono, @cedula, @foto)", connection);
 
             command.Parameters.AddWithValue("@nombre", item.Nombre);
             command.Parameters.AddWithValue("@apellido", item.Apellido);
@@ -36,7 +36,7 @@ namespace Database
         public bool Update(Doctor item)
         {
 
-            SqlCommand command = new SqlCommand("update Nombre = @nombre, Apellido = @apellido, Correo = @correo, Telefono = @telefono, Cedula = @cedula, Foto = @foto from Doctores where Id = @id", connection);
+            SqlCommand command = new SqlCommand("update Doctores SET Nombre = @nombre, Apellido = @apellido, Correo = @correo, Telefono = @telefono, Cedula = @cedula, Foto = @foto where Id = @id", connection);
 
             command.Parameters.AddWithValue("@id", item.Id);
             command.Parameters.AddWithValue("@nombre", item.Nombre);
@@ -92,7 +92,7 @@ namespace Database
         {
             try
             {
-                SqlDataAdapter query = new SqlDataAdapter("select * from Doctores ", connection);
+                SqlDataAdapter query = new SqlDataAdapter("select * from Doctores", connection);
                 return LoadData(query);
 
             }

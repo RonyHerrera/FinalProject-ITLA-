@@ -15,6 +15,7 @@ namespace BuinesLayer
         public ServiciosResultados(SqlConnection connection)
         {
             this.Connection = connection;
+            repositorio = new RepositorioResultadosLaboratorio(connection); 
         }
 
         public bool Add(Resultados item)

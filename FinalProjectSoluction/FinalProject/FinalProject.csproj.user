@@ -10,6 +10,9 @@
     <Compile Update="FrmAddEditPruebasDLab.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmAddEditResultadosPruebDeLab.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmAddEditUser.cs">
       <SubType>Form</SubType>
     </Compile>

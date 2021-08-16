@@ -472,28 +472,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Asus Rog Zephyrus\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus Rog Zephyrus\\Desktop\\FinalProject\\FinalProjectSoluction\\BuinesLayer\\BuinesLayer.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\clone\\FinalProject\\FinalProjectSoluction\\BuinesLayer\\BuinesLayer.csproj",
       "projectName": "BuinesLayer",
-      "projectPath": "C:\\Users\\Asus Rog Zephyrus\\Desktop\\FinalProject\\FinalProjectSoluction\\BuinesLayer\\BuinesLayer.csproj",
-      "packagesPath": "C:\\Users\\Asus Rog Zephyrus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus Rog Zephyrus\\Desktop\\FinalProject\\FinalProjectSoluction\\BuinesLayer\\obj\\",
+      "projectPath": "C:\\Users\\HP\\Desktop\\clone\\FinalProject\\FinalProjectSoluction\\BuinesLayer\\BuinesLayer.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\clone\\FinalProject\\FinalProjectSoluction\\BuinesLayer\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Asus Rog Zephyrus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -506,8 +498,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Asus Rog Zephyrus\\Desktop\\FinalProject\\FinalProjectSoluction\\Database\\Database.csproj": {
-              "projectPath": "C:\\Users\\Asus Rog Zephyrus\\Desktop\\FinalProject\\FinalProjectSoluction\\Database\\Database.csproj"
+            "C:\\Users\\HP\\Desktop\\clone\\FinalProject\\FinalProjectSoluction\\Database\\Database.csproj": {
+              "projectPath": "C:\\Users\\HP\\Desktop\\clone\\FinalProject\\FinalProjectSoluction\\Database\\Database.csproj"
             }
           }
         }

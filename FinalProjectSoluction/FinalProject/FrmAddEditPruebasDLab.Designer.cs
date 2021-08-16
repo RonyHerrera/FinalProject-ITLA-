@@ -34,7 +34,7 @@ namespace FinalProject
             this.BtnCrearPrueba = new System.Windows.Forms.Button();
             this.ctnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TbxNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -67,7 +67,7 @@ namespace FinalProject
             this.tableLayoutPanel2.Controls.Add(this.BtnCrearPrueba, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.ctnCancelar, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.TbxNombre, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(185, 118);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -89,6 +89,7 @@ namespace FinalProject
             this.BtnCrearPrueba.TabIndex = 0;
             this.BtnCrearPrueba.Text = "Crear Prueba";
             this.BtnCrearPrueba.UseVisualStyleBackColor = true;
+            this.BtnCrearPrueba.Click += new System.EventHandler(this.BtnCrearPrueba_Click);
             // 
             // ctnCancelar
             // 
@@ -100,6 +101,7 @@ namespace FinalProject
             this.ctnCancelar.TabIndex = 0;
             this.ctnCancelar.Text = "Cancelar";
             this.ctnCancelar.UseVisualStyleBackColor = true;
+            this.ctnCancelar.Click += new System.EventHandler(this.ctnCancelar_Click);
             // 
             // label1
             // 
@@ -114,14 +116,14 @@ namespace FinalProject
             this.label1.Text = "Nombre de la prueba:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // textBox1
+            // TbxNombre
             // 
-            this.tableLayoutPanel2.SetColumnSpan(this.textBox1, 2);
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Location = new System.Drawing.Point(3, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(413, 27);
-            this.textBox1.TabIndex = 2;
+            this.tableLayoutPanel2.SetColumnSpan(this.TbxNombre, 2);
+            this.TbxNombre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TbxNombre.Location = new System.Drawing.Point(3, 84);
+            this.TbxNombre.Name = "TbxNombre";
+            this.TbxNombre.Size = new System.Drawing.Size(413, 27);
+            this.TbxNombre.TabIndex = 2;
             // 
             // label2
             // 
@@ -143,6 +145,7 @@ namespace FinalProject
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmAddEditPruebasDLab";
             this.Text = "FrmAddEditPruebasDLab";
+            this.Load += new System.EventHandler(this.FrmAddEditPruebasDLab_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -158,7 +161,7 @@ namespace FinalProject
         private System.Windows.Forms.Button BtnCrearPrueba;
         private System.Windows.Forms.Button ctnCancelar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TbxNombre;
         private System.Windows.Forms.Label label2;
     }
 }

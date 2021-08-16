@@ -7,3 +7,12 @@ C:\Users\HP\Desktop\ProyectoFinal\FinalProjectSoluction\Database\bin\Debug\netco
 C:\Users\HP\Desktop\ProyectoFinal\FinalProjectSoluction\Database\bin\Debug\netcoreapp3.1\Database.pdb
 C:\Users\HP\Desktop\ProyectoFinal\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.dll
 C:\Users\HP\Desktop\ProyectoFinal\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.pdb
+C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\Database\bin\Debug\netcoreapp3.1\Database.deps.json
+C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\Database\bin\Debug\netcoreapp3.1\Database.dll
+C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\Database\bin\Debug\netcoreapp3.1\Database.pdb
+C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.AssemblyInfo.cs
+C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.dll
+C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.pdb

@@ -15,6 +15,7 @@ namespace BuinesLayer
         public ServiciosCitas(SqlConnection connection)
         {
             this.Connection = connection;
+            repositorio = new RepositorioCitas(Connection);
         }
 
         public bool Add(Cita item)
