@@ -16,3 +16,12 @@ C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\Database\obj\Debug\
 C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.csproj.CoreCompileInputs.cache
 C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.dll
 C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.pdb
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\Database\bin\Debug\netcoreapp3.1\Database.deps.json
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\Database\bin\Debug\netcoreapp3.1\Database.dll
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\Database\bin\Debug\netcoreapp3.1\Database.pdb
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.csproj.AssemblyReference.cache
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.AssemblyInfoInputs.cache
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.AssemblyInfo.cs
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.csproj.CoreCompileInputs.cache
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.dll
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\Database\obj\Debug\netcoreapp3.1\Database.pdb

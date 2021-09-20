@@ -22,3 +22,15 @@ C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\BuinesLayer\obj\Deb
 C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\BuinesLayer\obj\Debug\netcoreapp3.1\BuinesLayer.csproj.CopyComplete
 C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\BuinesLayer\obj\Debug\netcoreapp3.1\BuinesLayer.dll
 C:\Users\HP\Desktop\clone\FinalProject\FinalProjectSoluction\BuinesLayer\obj\Debug\netcoreapp3.1\BuinesLayer.pdb
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\BuinesLayer\bin\Debug\netcoreapp3.1\BuinesLayer.deps.json
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\BuinesLayer\bin\Debug\netcoreapp3.1\BuinesLayer.dll
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\BuinesLayer\bin\Debug\netcoreapp3.1\BuinesLayer.pdb
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\BuinesLayer\bin\Debug\netcoreapp3.1\Database.dll
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\BuinesLayer\bin\Debug\netcoreapp3.1\Database.pdb
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\BuinesLayer\obj\Debug\netcoreapp3.1\BuinesLayer.csproj.AssemblyReference.cache
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\BuinesLayer\obj\Debug\netcoreapp3.1\BuinesLayer.AssemblyInfoInputs.cache
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\BuinesLayer\obj\Debug\netcoreapp3.1\BuinesLayer.AssemblyInfo.cs
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\BuinesLayer\obj\Debug\netcoreapp3.1\BuinesLayer.csproj.CoreCompileInputs.cache
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\BuinesLayer\obj\Debug\netcoreapp3.1\BuinesLayer.csproj.CopyComplete
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\BuinesLayer\obj\Debug\netcoreapp3.1\BuinesLayer.dll
+C:\Users\Asus Rog Zephyrus\Desktop\FinalProject\FinalProjectSoluction\BuinesLayer\obj\Debug\netcoreapp3.1\BuinesLayer.pdb
